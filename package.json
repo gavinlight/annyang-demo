@@ -4,7 +4,7 @@
   "description": "Demo for conversations with annyang",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js localhost 3000"
+    "start": "nodemon --watch app ./server.js localhost 3000"
   },
   "repository": {
     "type": "git",
