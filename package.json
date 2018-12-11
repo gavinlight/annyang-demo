@@ -1,0 +1,25 @@
+{
+  "name": "annyang-demo",
+  "version": "0.0.1",
+  "description": "Demo for conversations with annyang",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server.js localhost 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gavinlight/annyang-demo.git"
+  },
+  "author": "Gavin Ligthart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gavinlight/annyang-demo/issues"
+  },
+  "homepage": "https://github.com/gavinlight/annyang-demo#readme",
+  "devDependencies": {
+    "nodemon": "1.18.8"
+  },
+  "dependencies": {
+    "express": "4.16.4"
+  }
+}
