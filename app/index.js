@@ -19,8 +19,6 @@ const addConvo = (trigger, callback) => {
   });
 }
 
-
-
 const say = (msg, callback) => {
   const message = new SpeechSynthesisUtterance();
   message.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Daniel');
