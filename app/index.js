@@ -1,7 +1,12 @@
-annyang.start();
+window.speechSynthesis.onvoiceschanged = function() {
+  annyang.start();
+  addConvo(commands);
+};
 
 const commands = {
-  'hello :first :last': (first, last) => { console.log(first, last); },
+  ':first': (first) => {
+    say(`Hello ${first}. Hoe gaat het?`);
+  },
 };
 
 const addConvo = (commands) => {
@@ -18,6 +23,14 @@ const mapCallbacks = (commands) => {
       }
     }))
   );
-}
+};
 
-addConvo(commands);
+const say = (msg) => {
+  const message = new SpeechSynthesisUtterance();
+  message.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Ting-Ting');
+  message.text = msg;
+  message.rate = 10;
+  message.pitch = 2;
+
+  window.speechSynthesis.speak(message);
+}
